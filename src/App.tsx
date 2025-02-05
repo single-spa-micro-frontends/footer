@@ -91,7 +91,7 @@ const FooterSection = ({
 
 const App = () => {
   const handleSearch = (value: string) => {
-    console.log(value);
+    window.eventBus.setSearchQuery(value);
   };
 
   return (
