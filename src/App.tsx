@@ -9,6 +9,7 @@ import {
 import logo from "./assets/logo.png";
 import logoText from "./assets/logoText.png";
 import Button from "./components/Button";
+import { EnrichedWindow } from "./types";
 
 const FOOTER_BOOK_CATEGORIES = [
   {
@@ -91,7 +92,7 @@ const FooterSection = ({
 
 const App = () => {
   const handleSearch = (value: string) => {
-    window.eventBus.setSearchQuery(value);
+    (window as unknown as EnrichedWindow).eventBus.setSearchQuery(value);
   };
 
   return (
